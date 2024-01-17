@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary: hsl(4, 100%, 67%);
+
+  /* NEUTRAL */
+  --darkSlateGrey: hsl(234, 29%, 20%);
+  --charcoalGrey: hsl(235, 18%, 26%);
+  --grey: hsl(235, 18%, 26%);
+  --white: hsl(0, 0%, 100%);
+
+  /* FONTS FAMILY */
+
+  --font-family-roboto: "Roboto", sans-serif;
+
+  /* FONTS WEIGHTS */
+  --weights400: 400;
+  --weights700: 700;
+
+  /* FONT SIZE */
+  --titleSize: 2.5rem;
+  --subtitleSize: 1.125rem;
+}
+body {
+  background: var(--charcoalGrey);
+  font-family: var(--font-family-roboto);
+}
+.flex-content {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  min-height: 100vh;
+  min-height: 100svh;
+  justify-content: center;
+  align-items: start;
+}
+.wrapper {
+  background: var(--white);
+  flex-direction: column;
+  max-width: 375px;
+}
+
+.wrapper .left_side {
+  padding: 38px 25px;
+  margin-top: -20px;
+}
+.wrapper .left_side .title {
+  font-size: var(--titleSize);
+}
+.wrapper .left_side .subtitle {
+  font-size: var(--subtitleSize);
+  line-height: 1.5;
+}
+.left_side .objectives {
+  margin-bottom: 30px;
+}
+.left_side .objectives .objectives_items {
+  font-size: var(--subtitleSize);
+  gap: 15px;
+}
+.left_side .objectives .objectives_items img {
+  width: 20px;
+}
+
+.form_content label {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.form_content label input {
+  border: 1px solid #0000007e;
+  border-radius: 5px;
+  padding: 15px;
+  min-width: 90%;
+}
+
+.form_content label:focus {
+  border: 1px solid black;
+}
+
+/* ERROR STYLES */
+.form_content label input.error {
+  border: var(--primary) solid 1px;
+  color: var(--primary);
+  background: hsla(4, 100%, 67%, 0.2);
+}
+
+.form_content label.error-format::before {
+  position: absolute;
+  content: "valid email required";
+  top: 0;
+  right: 0;
+  color: var(--primary);
+  font-weight: var(--weights700);
+}
+.form_content label.error-empty::before {
+  position: absolute;
+  content: "can't be blank";
+  top: 0;
+  right: 0;
+  color: var(--primary);
+  font-weight: var(--weights700);
+}
+
+/* THANKS CARD STYLES */
+.wrapper .thanks_card {
+  max-width: 375px;
+  display: none;
+  margin-top: 7.5rem;
+  padding: 25px;
+}
+.wrapper .thanks_card h2 {
+  font-size: var(--titleSize);
+}
+.wrapper .thanks_card p {
+  margin-top: -12px;
+  font-size: var(--subtitleSize);
+  line-height: 1.5;
+}
+.wrapper .thanks_card .btn {
+  margin-top: 14.5rem;
+  padding: 1.125rem;
+}
+
+.wrapper .thanks_card p span {
+  font-weight: bold;
+}
+
+.btn {
+  cursor: pointer;
+  min-width: 100%;
+  margin-top: 30px;
+  border: 0;
+  padding: 15px;
+  color: var(--white);
+  background: var(--darkSlateGrey);
+  font-weight: var(--weights700);
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: linear-gradient(0.25turn, var(--primary), hsl(12, 100%, 63%));
+  box-shadow: 20px 82px 148px
+    linear-gradient(0.25turn, var(--primary), hsl(12, 100%, 63%));
+}
+
+@media (min-width: 1200px) {
+  .container {
+    align-items: center;
+  }
+  .wrapper {
+    flex-direction: row-reverse;
+    max-width: 1440px;
+    border-radius: 30px;
+  }
+
+  .right_side {
+    padding: 1rem;
+  }
+  .wrapper .left_side {
+    padding: 30px;
+    max-width: 26rem;
+    margin-top: -2.75rem;
+    margin-left: 2.5rem;
+  }
+  .wrapper .left_side .title {
+    font-size: 3.5rem;
+    margin-bottom: auto;
+  }
+  .left_side .objectives {
+    margin-bottom: 2rem;
+  }
+
+  .left_side .objectives .objectives_items {
+    font-size: 1rem;
+    margin-bottom: -5px;
+  }
+
+  .form_content label {
+    margin-top: 50px;
+  }
+
+  .form_content label input {
+    min-width: 84%;
+  }
+  .btn {
+    padding: 1.125rem 0;
+    min-width: 92%;
+  }
+  .wrapper .thanks_card {
+    margin-top: 20px;
+    margin-left: 1.5rem;
+  }
+  .wrapper .thanks_card h2 {
+    font-size: 3rem;
+  }
+  .wrapper .thanks_card .btn {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.125rem;
+  }
+
+  .form_content label.error-empty::before,
+  .form_content label.error-format::before {
+    right: 35px;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main class="container flex-content">
+      <section class="wrapper flex-content">
+        <div class="right_side">
+          <picture>
+            <source media="(max-width: 1000px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
+            <source media="(min-width: 1200px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+            <img
+              src="./assets/images/illustration-sign-up-mobile.svg"
+              alt="sign up illustration-sign-up-mobile"
+              aria-hidden="true"
+            />
+          </picture>
+        </div>
+
+        <div class="left_side" id="left">
+          <h1 class="title">Stay updated!</h1>
+          <p class="subtitle">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <div class="objectives">
+            <p class="objectives_items flex-content">
+              <span><img src="./assets/images/icon-success.svg" alt="" /></span>
+              Product discovery and building what matters
+            </p>
+            <p class="objectives_items flex-content">
+              <span><img src="./assets/images/icon-success.svg" alt="" /></span>
+              Measuring to ensure updates are a success
+            </p>
+            <p class="objectives_items flex-content">
+              <span><img src="./assets/images/icon-success.svg" alt="" /></span>
+              And much more!
+            </p>
+          </div>
+
+          <form class="form_content">
+            <label id="label" class="flex-content">
+              Email address
+              <input
+                type="text"
+                id="email_input"
+                placeholder="email@company.com"
+                autocomplete="off"
+                maxlength="35"
+              />
+            </label>
+            <button type="submit" id="btn" class="btn">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+
+        <div class="thanks_card">
+          <img src="./assets/images/icon-success.svg" alt="" />
+          <h2>Thanks for subscribing!</h2>
+          <p>
+            A confirmation email has been sent to
+            <span id="email_address">ash@loremcompany.com.></span> Please open
+            it and click the button inside to confirm your subscription.
+          </p>
+          <button type="submit" class="btn">Dismiss message</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+    <!-- <div class="attribution">
+    Challenge by <a  rel="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
